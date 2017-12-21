@@ -1,5 +1,5 @@
 name: Home Assistant
 description: |
-  Track and control all devices at home and automate control.
-version: 0.59.2
+  Home Assistant is an open-source home automation platform running on Python 3. Track and control all devices at home and automate control.
+version: 0.60.0
 category: Automation
