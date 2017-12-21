@@ -3,7 +3,7 @@ services:
   db:
     image: mysql:5.7.19
     volumes:
-      - /var/lib/docker/volumes/ha_mysql:/var/lib/mysql
+      - /opt/docker-data/hass/ha_mysql:/var/lib/mysql
     {{- if (.Values.MYSQL_PORT) }}
     ports:
       - ${MYSQL_PORT}:3306
@@ -17,9 +17,10 @@ services:
   homeassistant:
     depends_on:
       - db
-    image: homeassistant/home-assistant:0.50.2
+    image: homeassistant/home-assistant:0.60
     volumes:
-      - /var/lib/docker/volumes/ha_config:/config
+      - /opt/docker-data/hass:/config
+      - /dev/bus/usb:/dev/bus/usb
     ports:
       - ${HA_PORT}:8123
     devices:
@@ -34,3 +35,4 @@ services:
       MYSQL_DATABASE: ${MYSQL_DATABASE}
       MYSQL_USER: ${MYSQL_USER}
       MYSQL_PASSWORD: ${MYSQL_PASSWORD}
+     
