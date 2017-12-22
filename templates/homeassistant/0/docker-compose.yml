@@ -18,6 +18,8 @@ services:
     depends_on:
       - db
     image: homeassistant/home-assistant:0.60
+    stdin_open: true
+    network_mode: host
     volumes:
       - /opt/docker-data/hass:/config
       - /dev/bus/usb:/dev/bus/usb
