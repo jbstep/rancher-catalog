@@ -6,12 +6,12 @@ version: '2'
     Home Assistant is an open-source home automation platform running on Python 3. Track and control all devices at home and automate control.
   version: 0.60
   questions:
-   - variable: "privileged"
-     description: Enable/disable to run in privileged mode (Must be true to access USB Insteon/ZWave/Zigbee devices).
-     label: "Privileged mode:"
-     required: true
-     default: false 
-     type: "boolean" 
+#   - variable: "privileged"
+#     description: Enable/disable to run in privileged mode (Must be true to access USB Insteon/ZWave/Zigbee devices).
+#     label: "Privileged mode:"
+#     required: true
+#     default: false 
+#     type: "boolean" 
    - variable: 'HA_PORT'
      description: 'Home Assistant Port'
      label: 'Home Assistant Port'
